@@ -5,6 +5,7 @@
 * NodeJS
 * Express
 * Typescript
+* MongoDB
 
 ## Server Setup
 
