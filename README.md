@@ -11,7 +11,7 @@
 
 1. Run 'npm install' (install all project dependencies)
 2. Run MongoDB daemon service
-2. Create .env file from .env.template with your local configurations
+2. Create .env file from .env.example with your local configurations
 4. Run 'npm start' (start server)
 5. Run 'npm run seed:products' to fill table with records
 
@@ -38,11 +38,11 @@ Consume the inventory if the request contains all products that are in stock. If
  [{"productId": "54", "amount" : 2}, {"productId": "75", "amount" : 1}]. 
  ```
  
-- POST /confirm-order/:orderId <br>
+- POST /inventory/confirm-order/:orderId <br>
 Confirm the order for the products that are in stock even if this order contains products that are out of stock. <br>
  ``orderId`` - id of order stored in 'orders' table
  
-- POST /reject-order/:orderId <br>
+- POST /inventory/reject-order/:orderId <br>
 Reject/delete the order if it contains products that are out of stock. <br>
 ``orderId`` - id of order stored in 'orders' table
  
